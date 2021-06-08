@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #2b323f;
+  }
+  
+  body,
+  input,
+  textarea,
+  button {
+    font: 400 1rem 'IBM Plex Sans', sans-serif;
+  }
+  a{
+    text-decoration: none;
+  }
+  
+  h1 {
+    color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+  }
+  h1#loginTitle {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+  .loginContainer {
+    display: grid;
+    background: #444f64;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    border-radius: 1rem;
+  }
+  .login {
+    display: grid;
+  }
+  label.login {
+    color: #e5e5e5;
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  input.login {
+    background: #aabbde;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    border-style: none;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  div#loginBtn {
+    background: #20262f;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 0rem 0rem 1rem 1rem;
+  }
+  button {
+    border: none;
+    background: #20262f;
+    color: #aabbde;
+  }
+  a#LinkRegistro {
+    color: #7bdff5;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  h5 {
+    color: #aabbde;
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  
+  @media (max-width: 1080px) {
+    html {
+      font-size: 93.75%;
+    }
+  }
+  @media (max-width: 720px) {
+    html {
+      font-size: 87.5%;
+    }
+  }
+  
