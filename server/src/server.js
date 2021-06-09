@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(cors())
 app.use(routes);
-const port = 3333;
+const port = 3332;
 app.listen(port, () => {
 	console.log(`running on port ${port}.`);
 });
