@@ -9,9 +9,11 @@
     -webkit-font-smoothing: antialiased;
     background: rgba(36, 38, 38, 1);
   }
+  
   .btn-table {
     display: flex;
     justify-content: space-evenly;
+    color: white;
   }
   .btn-table button {
     border-radius: 100%;
@@ -20,6 +22,7 @@
     align-content: center;
     justify-content: center;
     background-color: #5a606d;
+    color: white;
   }
   .btn-table button:hover {
     transform: scale(1.3, 1.3);
@@ -43,7 +46,7 @@
     max-width: 100%;
     white-space: nowrap;
     background-color: #5a606d;
-    opacity: 80%;
+    opacity: 90%;
   }
   
   .fl-table td,
@@ -61,7 +64,7 @@
   
   .fl-table thead th {
     color: #e6e4e4;
-    background: #053165;
+    background: #e2861d;
    
     border-bottom: 1px solid #969090;
     font-size: larger;
