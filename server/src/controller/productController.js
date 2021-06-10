@@ -23,6 +23,7 @@ module.exports = {
 		const product = await Product.sequelize.query(
 			`SELECT * FROM products as product WHERE product.nomeProduto LIKE '%${like}%'`
 		  );
+
 		return res.json(product);
 	},
 };

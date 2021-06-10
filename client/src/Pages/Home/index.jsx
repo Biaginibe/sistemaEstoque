@@ -52,23 +52,27 @@ const Home = () => {
      
     });
     // form.append('like', forminfo);
-    console.log(form);
+    console.log("log do form"+form);
     axios({
       method: "post",
-      url: "localhost:3333/user/stock/findLike",
+      url: "http://localhost:3333/user/stock/findLike",
       data: form,
-      headers: { "Content-Type": "multipart/form-data",
-    "mode":"cors" },
-    })
+      headers: { "Content-Type": "application/json",
+     },
+    })  
       .then(function (response) {
         //handle success
-        console.log(response);
-        setUsers(users);
-        refetch();
+        console.log(response.data[0].nomeProduto);
+        const lmao = response.data;
+        setUsers(lmao);
+        // setUsers(users.filter((response)=>response));
+        
+        
       })
       .catch(function (response) {
         //handle error
         console.log(response);
+        alert("erro na busca");
       });
   };
 
@@ -85,7 +89,7 @@ const Home = () => {
     }
   }, [data]);
 
-  console.log(users);
+  // console.log(users);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error!</p>;
