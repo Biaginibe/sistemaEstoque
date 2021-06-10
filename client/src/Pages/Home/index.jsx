@@ -62,7 +62,6 @@ const Home = () => {
     })  
       .then(function (response) {
         //handle success
-        console.log(response.data[0].nomeProduto);
         const lmao = response.data;
         setUsers(lmao);
         // setUsers(users.filter((response)=>response));
