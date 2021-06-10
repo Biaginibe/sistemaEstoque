@@ -18,7 +18,8 @@ module.exports = {
 		return res.json(product);
 	},
 	async findProductsLike(req, res) {
-		const {like} = req.body;
+		const like = req.body.like;
+		console.log(req.body.like);
 		const product = await Product.findAll({
 			where: {
 				nomeProduto:{[Op.substring]: like,}
