@@ -1,5 +1,6 @@
 const Product = require('../model/Product');
-const { Op } = require('sequelize');
+const { QueryTypes } = require('sequelize');
+const sequelize = require('sequelize');
 
 module.exports = {
 	async createProduct(req, res) {
@@ -18,13 +19,12 @@ module.exports = {
 		return res.json(product);
 	},
 	async findProductsLike(req, res) {
-		const like = req.body.like;
-		console.log(req.body.like);
-		const product = await Product.findAll({
-			where: {
-				nomeProduto:{[Op.substring]: like,}
-			},
-		});
+		const {like} = req.body;
+		const product = await Product.sequelize.query(
+			`SELECT * FROM products as product WHERE product.nomeProduto LIKE '%${like}%'`
+		  );
+
 		return res.json(product);
 	},
 };
+
