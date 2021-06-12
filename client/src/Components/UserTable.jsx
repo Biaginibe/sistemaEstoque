@@ -24,7 +24,7 @@ const UserTable = (props) => {
 
               return (
                 <tr key={id}>
-                  
+                  {console.log(id)}
                   <td>{nomeProduto}</td>
                   <td>{descricao}</td>
                   <td>{quantidade}</td>
